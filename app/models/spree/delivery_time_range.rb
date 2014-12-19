@@ -13,6 +13,10 @@ module Spree
       "#{ name } - #{ delivery_time }"
     end
 
+    def to_s
+      "#{ name } - #{ start_delivery_time("%H:%M") }"
+    end
+
     private
     def time_range
       if start_delivery_time > end_delivery_time
