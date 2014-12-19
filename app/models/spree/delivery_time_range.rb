@@ -3,9 +3,7 @@ module Spree
     validates :name, :start_delivery_time, :end_delivery_time, presence: true
     validate :time_range
 
-    scope :visible, where(visible: true)
-
-    attr_accessible :name, :start_delivery_time, :end_delivery_time, :visible
+    scope :visible, -> { where(visible: true) }
 
     def delivery_time
       "#{ start_delivery_time.strftime("%H:%M") } - #{ end_delivery_time.strftime("%H:%M") }"
