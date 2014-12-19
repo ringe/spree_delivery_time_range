@@ -1,0 +1,35 @@
+nb:
+  activerecord:
+    attributes:
+      spree/delivery_time_range:
+        name: Navn
+        start_delivery_time: Starttid levering
+        end_delivery_time: Sluttid levering
+        visible: Synlig
+      spree/order:
+        delivery_time: Leveringstidspunkt
+        start_delivery_time: Starttid levering
+        end_delivery_time: Sluttid levering
+    errors:
+      models:
+        spree/order:
+          attributes:
+            start_delivery_time:
+              nb: må komme før sluttid
+  helpers:
+    label:
+      order:
+        start_delivery_time: Starttid levering
+        end_delivery_time: Sluttid levering
+  spree:
+    admin:
+      menu:
+        delivery_time_ranges: Leveringstider
+      new_time_range: Ny leveringstid
+      editing_time_range: Endre leveringstid
+      listing_time_ranges: Leveringstider
+      back_to_time_ranges: Tilbake til leveringstider
+  spree_delivery_time:
+    title: Ønsket leveringstid
+  delivery_time: Ønsket leveringstid
+  unknown: Ukjent

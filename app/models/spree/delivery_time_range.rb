@@ -6,15 +6,11 @@ module Spree
     scope :visible, -> { where(visible: true) }
 
     def delivery_time
-      "#{ start_delivery_time.strftime("%H:%M") } - #{ end_delivery_time.strftime("%H:%M") }"
+      start_delivery_time.strftime("%H:%M")
     end
 
     def delivery_time_description
       "#{ name } - #{ delivery_time }"
-    end
-
-    def to_s
-      "#{ name } - #{ start_delivery_time("%H:%M") }"
     end
 
     private
